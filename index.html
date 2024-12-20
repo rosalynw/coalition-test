@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthCare Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-container" role="navigation" aria-label="Main navigation">
+        <a id="logo-container" aria-label="Go to home page" href="#">
+          <img src="/public/icons/TestLogo.svg" class="logo" alt="Test.Care dashboard logo" />
+        </a>
+        <menu id="nav-menu" role="menu" aria-label="Main menu">
+          <li class="menu-item" role="menuitem">
+            <img
+              src="/public/icons/home_FILL0_wght300_GRAD0_opsz24.svg"
+              class="icon"
+              alt=""
+              aria-hidden="true"
+            /><span><a href="#">Overview</a></span>
+          </li>
+          <li class="menu-item selected" role="menuitem">
+            <img
+              src="/public/icons/group_FILL0_wght300_GRAD0_opsz24.svg"
+              class="icon"
+              alt=""
+              aria-hidden="true"
+            /><span><a href="#">Patients</a></span>
+          </li>
+          <li class="menu-item" role="menuitem">
+            <img
+              src="/public//icons/calendar_today_FILL0_wght300_GRAD0_opsz24.svg"
+              class="icon"
+              alt=""
+              aria-hidden="true"
+            /><span><a href="#">Schedule</a></span>
+          </li>
+          <li class="menu-item" role="menuitem">
+            <img
+              src="/public/icons/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg"
+              class="icon"
+              alt=""
+              aria-hidden="true"
+            /><span><a href="#">Message</a></span>
+          </li>
+          <li class="menu-item" role="menuitem">
+            <img
+              src="/public/icons/credit_card_FILL0_wght300_GRAD0_opsz24.svg"
+              class="icon"
+              alt=""
+              aria-hidden="true"
+            /><span><a href="#">Transactions</a></span>
+          </li>
+        </menu>
+        <figure class="thumbnail-container">
+          <img src="/public/images/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc@2x.png" class="thumbnail" alt="" />
+          <figcaption id="gp-data">
+            <p id="gp-name" class="thumbnail-name">Dr. Jose Simmons</p>
+            <p id="general-pracitioner" class="thumbnail-data">General Practicioner</p>
+          </figcaption>
+          <img src="/public/icons/settings_FILL0_wght300_GRAD0_opsz24.svg" class="menu-icon" alt="">
+          <img src="/public/icons/more_vert_FILL0_wght300_GRAD0_opsz24.svg" class="menu-icon" alt="">
+        </figure>
+      </nav>
+    </header>
+    <main id="main-content">
+
+      <section id="patients-section" class="card">
+        <h3 id="patients-header" class="section-title">
+          Patients
+          <button class="icon-button button" aria-label="Search patients" aria-controls="patient-list">
+            <img src="/public/icons/search_FILL0_wght300_GRAD0_opsz24.svg" class="icon" alt="">
+          </button>
+        </h3>
+
+        <ul id="patient-list">
+          <li>Loading...</li>
+        </ul>
+      </section>
+
+      <section id="diagnosis-section" class="card">
+        <h3 id="diagnosis-history__header" class="section-title">
+          Diagnosis History
+        </h3>
+
+        <div class="diagnosis-grid">
+
+          <figure id="blood-pressure" class="diagnosis-item">
+            <div class="diagnosis-item__content">
+              <h4 class="diagnosis-item__title bp">Blood Pressure</h4>
+              <p class="diagnosis-item__overview">
+                Last 6 months
+                <img src="/public/icons/expand_more_FILL0_wght300_GRAD0_opsz24.svg" class="icon icon--expand" alt="Expand details">
+              </p>
+                <div class="diagnosis-item__chart-container">
+                  <canvas id="blood-pressure-chart"></canvas>
+                </div>
+            </div>
+              <ul class="diagnosis-item__details">
+                <li class="item">
+                  <p id="systolic" class="details__label">Systolic</p>
+                  <p id="systolic-item__value" class="details__value"></p>
+                  <p id="systolic-item__level" class="details__level"></p>
+                </li>
+                <hr>
+                <li class="item">
+                  <p id="diastolic" class="details__label">Diastolic</p>
+                  <p id="diastolic-item__value" class="details__value"></p>
+                  <p id="diastolic-item__level" class="details__level"></p>
+                </li>
+              </ul>
+          </figure>
+
+          <figure id="respiratory-rate" class="diagnosis-item">
+            <img src="/public/images/respiratory rate.svg" class="diagnosis-item__img" alt="">
+            <h4 class="diagnosis-item__title">Respiratory Rate</h4>
+            <p id="respiratory-value" class="diagnosis-item__value"></p>
+            <p id="respiratory-level" class="diagnosis-item__level"></p>
+          </figure>
+
+          <figure id="temperature" class="diagnosis-item">
+            <img src="/public/images/temperature.svg" class="diagnosis-item__img" alt="">
+            <h4 class="diagnosis-item__title">Temperature</h4>
+            <p id="temperature-value" class="diagnosis-item__value"></p>
+            <p id="temperature-level" class="diagnosis-item__level"></p>
+          </figure>
+
+          <figure id="heart-rate" class="diagnosis-item">
+            <img src="/public/images/HeartBPM.svg" class="diagnosis-item__img" alt="">
+            <h4 class="diagnosis-item__title">Heart Rate</h4>
+            <p id="heart-rate-value" class="diagnosis-item__value"></p>
+            <p id="heart-rate-level" class="diagnosis-item__level"></p>
+          </figure>
+        </div>
+      </section>
+
+      <section id="user-section" class="card">
+
+        <img src="" id="profile-image" alt="User profile image" aria-hidden="true" />
+
+        <h3 id="user-name" class="section-title">
+        </h3>
+
+        <ul class="user-data-container">
+          <li id="birthday" class="thumbnail-container">
+            <img src="/public/icons/BirthIcon.svg" class="thumbnail" alt="" />
+            <div>
+              <p class="data-title">Date of Birth</p>
+              <p id="user__birthday" class="user-data">Sample</p>
+            </div>
+          </li>
+          <li id="gender" class="thumbnail-container">
+            <img src="/public/icons/FemaleIcon.svg" class="thumbnail"/>
+            <div>
+              <p class="data-title">Gender</p>
+              <p id="user__gender" class="user-data">Sample</p>
+            </div>
+          </li>
+          <li id="contact-info" class="thumbnail-container">
+            <img src="/public/icons/PhoneIcon.svg" class="thumbnail"/>
+            <div>
+              <p class="data-title">Contact Info</p>
+              <p id="user__contact" class="user-data">Sample</p>
+            </div>
+          </li>
+          <li id="emergency-contacts" class="thumbnail-container">
+            <img src="/public/icons/PhoneIcon.svg" class="thumbnail"/>
+            <div>
+              <p class="data-title">Emergency Contacts</p>
+              <p id="user__emergency" class="user-data">Sample</p>
+            </div>
+          </li>
+          <li id="insurance-provider" class="thumbnail-container">
+            <img src="/public/icons/InsuranceIcon.svg" class="thumbnail"/>
+            <div>
+              <p class="data-title">Insurance Provider</p>
+              <p id="user__insurance" class="user-data">Sample Data</p>
+            </div>
+          </li>
+        </ul>
+
+        <button id="show-info" class="info-button button" aria-controls="user-data-container">
+          Show All Information
+        </button>
+
+      </section>
+
+      <section id="diagnostic-list" class="card">
+
+        <h3 id="diagnostic-list-header" class="section-title">Diagnostic List</h3>
+
+        <table id="diagnosis-table">
+          <thead>
+            <tr class="table-header">
+              <th scope="col">Problem/Diagnosis</th>
+              <th scope="col">Description</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Blah</td>
+              <td>Blah</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="lab-results" class="card">
+        <h3 id="lab-results-header" class="section-title">Lab Results</h3>
+
+        <ul id="lab-results-list">
+          <li class="results-container">
+            <p class="result">Sample Stuff
+            <img src="/public/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg" class="icon">
+          </p>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script type="module" src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="chart.js"></script>
+  </body>
+</html>

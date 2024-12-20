@@ -1,0 +1,26 @@
+{
+  "name": "coalition-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:backend": "npm start --prefix backend",
+    "start:frontend": "live-server --port=8080",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm install && cd backend && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.4.6",
+    "moment": "^2.30.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
