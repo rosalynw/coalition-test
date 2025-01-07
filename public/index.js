@@ -59,7 +59,7 @@ function displayUsers(users) {
     listItem.appendChild(patientData);
 
     const moreIcon = document.createElement('img');
-    moreIcon.src = '/public/icons/more_horiz_FILL0_wght300_GRAD0_opsz24.svg';
+    moreIcon.src = '/icons/more_horiz_FILL0_wght300_GRAD0_opsz24.svg';
     moreIcon.alt = 'More options';
     moreIcon.classList.add('more-icon');
     moreIcon.setAttribute('aria-label', 'More options');
@@ -130,10 +130,10 @@ function displayUserDetails(user) {
       imageItem.classList.add('arrow-icon');
       imageItem.alt = `Blood pressure level`;
       if (level.includes('Lower')) {
-        imageItem.src = '/public/icons/ArrowDown.svg';
+        imageItem.src = '/icons/ArrowDown.svg';
         
       } else {
-        imageItem.src = '/public/icons/ArrowUp.svg';
+        imageItem.src = '/icons/ArrowUp.svg';
       };
       parentElement.prepend(imageItem);
     }
@@ -183,7 +183,7 @@ function displayUserDetails(user) {
 
     const downloadIcon = document.createElement('img');
     downloadIcon.classList.add('icon');
-    downloadIcon.src ='/public/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg';
+    downloadIcon.src ='/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg';
     downloadIcon.alt = 'Download lab result';
     labResult.appendChild(downloadIcon);
 
