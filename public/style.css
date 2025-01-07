@@ -112,8 +112,7 @@ section {
   padding: 12px 20px;
 }
 
-.thumbnail-container:hover,
-.thumbnail-container.selected {
+.thumbnail-container:hover {
   background-color: #D8FCF7;
   cursor: pointer;
 }
@@ -371,8 +370,7 @@ ul#lab-results-list {
   padding: 15px 10px;
 }
 
-.result:hover,
-.result.selected {
+.result:hover {
   background-color: #F6F7F8;
   cursor: pointer;
 }
