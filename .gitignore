@@ -1,3 +1,5 @@
 #Files to ignore
 .env
 node_modules
+
+.codegpt
