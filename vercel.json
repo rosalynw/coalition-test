@@ -12,6 +12,14 @@
     {
       "src": "api/*.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/icons/*",
+      "use": "@vercel/static"
+    },    
+    {
+      "src": "public/images/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
