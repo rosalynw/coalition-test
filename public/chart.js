@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     pink: 'rgb(230, 111, 210)',
     purple: 'rgb(140, 111, 230)',
   };
-  console.log(diagnosisData);
-
+    
   new Chart(ctx, {
     type: 'line',
     data: {
