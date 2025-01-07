@@ -1,4 +1,4 @@
-const DB = 'http://localhost:3000';
+const DB = '/api/data';
 
 
 async function fetchData(endpoint, query = '') {
