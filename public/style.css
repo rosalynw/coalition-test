@@ -76,14 +76,14 @@ hr {
   align-items: center;
   padding: 10px 15px;
   margin: 5px 15px;
+  flex-direction: column;
 }
 
 .menu-item img {
   margin-right: 10px;
 }
 
-.menu-item:hover,
-.menu-item.selected {
+.menu-item:hover{
   background-color: #01F0D0;
   border-radius: 41px;
 }

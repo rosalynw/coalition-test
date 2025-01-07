@@ -36,6 +36,7 @@ function displayUsers(users) {
     listItem.classList.add('thumbnail-container');
 
     const thumbnail = document.createElement('img');
+    console.log('Thumbnail URL:', user.profile_picture);  // Log to check the image URL for the thumbnaild
     thumbnail.src = user.profile_picture;
     thumbnail.alt = `${user.name} profile picture`;
     thumbnail.classList.add('thumbnail');
@@ -75,6 +76,7 @@ function displayUsers(users) {
 
 function displayUserDetails(user) {
   console.log(user)
+
 
   const name = document.getElementById('user-name');
   const profile_picture = document.getElementById('profile-image');
