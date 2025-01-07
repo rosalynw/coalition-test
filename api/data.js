@@ -4,10 +4,16 @@ require('dotenv').config();
 
 module.exports = async (req, res) => {
   try {
-    // Fetch data from external API
+
+    const username = process.env.API_USERNAME;
+    const password = process.env.API_PASSWORD;
+    const auth  = Buffer.from(`${username}:${password}`).toString('base64');
+
     const response = await axios.get('https://fedskillstest.coalitiontechnologies.workers.dev', {
       headers: {
-        'Authorization': `Basic ${process.env.API_KEY}`
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Authorization': `Basic ${auth}`,
+        'API_KEY': process.env.API_KEY
       }
     });
 
