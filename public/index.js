@@ -1,4 +1,4 @@
-const DB = 'http://localhost:3000';
+const DB = '/api/data';
 
 
 async function fetchData(endpoint, query = '') {
@@ -36,6 +36,7 @@ function displayUsers(users) {
     listItem.classList.add('thumbnail-container');
 
     const thumbnail = document.createElement('img');
+    console.log('Thumbnail URL:', user.profile_picture);  // Log to check the image URL for the thumbnaild
     thumbnail.src = user.profile_picture;
     thumbnail.alt = `${user.name} profile picture`;
     thumbnail.classList.add('thumbnail');
@@ -58,7 +59,7 @@ function displayUsers(users) {
     listItem.appendChild(patientData);
 
     const moreIcon = document.createElement('img');
-    moreIcon.src = '/public/icons/more_horiz_FILL0_wght300_GRAD0_opsz24.svg';
+    moreIcon.src = '/icons/more_horiz_FILL0_wght300_GRAD0_opsz24.svg';
     moreIcon.alt = 'More options';
     moreIcon.classList.add('more-icon');
     moreIcon.setAttribute('aria-label', 'More options');
@@ -75,6 +76,7 @@ function displayUsers(users) {
 
 function displayUserDetails(user) {
   console.log(user)
+
 
   const name = document.getElementById('user-name');
   const profile_picture = document.getElementById('profile-image');
@@ -128,10 +130,10 @@ function displayUserDetails(user) {
       imageItem.classList.add('arrow-icon');
       imageItem.alt = `Blood pressure level`;
       if (level.includes('Lower')) {
-        imageItem.src = '/public/icons/ArrowDown.svg';
+        imageItem.src = '/icons/ArrowDown.svg';
         
       } else {
-        imageItem.src = '/public/icons/ArrowUp.svg';
+        imageItem.src = '/icons/ArrowUp.svg';
       };
       parentElement.prepend(imageItem);
     }
@@ -181,7 +183,7 @@ function displayUserDetails(user) {
 
     const downloadIcon = document.createElement('img');
     downloadIcon.classList.add('icon');
-    downloadIcon.src ='/public/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg';
+    downloadIcon.src ='/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg';
     downloadIcon.alt = 'Download lab result';
     labResult.appendChild(downloadIcon);
 

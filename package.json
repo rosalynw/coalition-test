@@ -4,17 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:backend": "npm start --prefix backend",
-    "start:frontend": "live-server --port=8080",
-    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm install && cd backend && npm install"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.9",
     "chart.js": "^4.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "moment": "^2.30.1"
   },
   "devDependencies": {
