@@ -17,16 +17,13 @@ module.exports = async (req, res) => {
       }
     });
 
-    // Extract the 'name' query parameter, if available
     const name = req.query.name?.trim().toLowerCase();
 
-    // If a name is provided, filter the data for that user
     if (name) {
       const filteredData = response.data.find(user => user.name.toLowerCase() === name);
       return res.status(200).json(filteredData || { error: 'User not found' });
     }
 
-    // If no name is provided, return the full data
     res.status(200).json(response.data);
 
   } catch (error) {

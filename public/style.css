@@ -76,7 +76,6 @@ hr {
   align-items: center;
   padding: 10px 15px;
   margin: 5px 15px;
-  flex-direction: column;
 }
 
 .menu-item img {
